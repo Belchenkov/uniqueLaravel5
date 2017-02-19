@@ -26,16 +26,16 @@ class IndexController extends Controller
             $item = ['title' => $page->name, 'alias' => $page->alias ];
             array_push($menu, $item);
         }
-        $item = ['title' => 'Services', 'alias' => 'service'];
+        $item = ['title' => 'Услуги', 'alias' => 'service'];
         array_push($menu, $item);
     
-        $item = ['title' => 'Portfolio', 'alias' => 'Portfilio'];
+        $item = ['title' => 'Портфолио', 'alias' => 'Portfilio'];
         array_push($menu, $item);
     
-        $item = ['title' => 'Team', 'alias' => 'team'];
+        $item = ['title' => 'Команда', 'alias' => 'team'];
         array_push($menu, $item);
     
-        $item = ['title' => 'Contact', 'alias' => 'contact'];
+        $item = ['title' => 'Контакты', 'alias' => 'contact'];
         array_push($menu, $item);
     
     
