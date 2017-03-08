@@ -12,9 +12,9 @@
 		          <div class="col-lg-5 col-sm-7">
 		            <div class="top_left_cont zoomIn wow animated"> 
 		              {!! $page->text !!}
-		              <a href="{{ route('page',array('alias'=>$page->alias))}}" class="read_more2">Read more</a> </div>
+		              <a href="{{ route('page',array('alias'=>$page->alias))}}" class="read_more2">Подробнее</a> </div>
 		          </div>
-		          <div class="col-lg-7 col-sm-5">
+		          <div class="col-lg-7 col-sm-5 main_device">
 					{!! Html::image('assets/img/'.$page->images) !!}
 				  </div>
 		        </div>
@@ -30,12 +30,12 @@
 		    <h2>{{ $page->name}}</h2>
 		    <div class="inner_section">
 			<div class="row">
-		      <div class=" col-lg-4 col-md-4 col-sm-4 col-xs-12 pull-right">{!! Html::image('assets/img/'.$page->images,'',array('class'=>'img-circle delay-03s animated wow zoomIn')) !!}</div>
+		      <div class=" col-lg-4 col-md-4 col-sm-4 col-xs-12 pull-right">{!! Html::image('assets/img/'.$page->images,'',array('class'=>'img_about delay-03s animated wow zoomIn')) !!}</div>
 		      	<div class=" col-lg-7 col-md-7 col-sm-7 col-xs-12 pull-left">
 		        	<div class=" delay-01s animated fadeInDown wow animated">
 					{!! $page->text !!}
 		</div>
-		<div class="work_bottom"> <span>Want to know more..</span> <a href="{{ route('page',array('alias'=>$page->alias))}}" class="contact_btn">Contact Us</a> </div>       
+		<div class="work_bottom"> <span>Хотите узнать больше..</span> <a href="{{ route('page',array('alias'=>$page->alias))}}" class="contact_btn">Подробнее</a> </div>       
 			   </div>
 		      	
 		      </div>
@@ -55,7 +55,7 @@
 	<!--Service-->
 	<section  id="service">
 	  <div class="container">
-	    <h2>Services</h2>
+	    <h2>Услуги</h2>
 	    <div class="service_wrapper">
 	    
 	    	@foreach($services as $k=>$service)
@@ -99,7 +99,7 @@
     
     <!-- Title -->
     <div class="section-title">
-      <h2>Portfolio</h2>
+      <h2>Портфолио</h2>
     </div>
     <!--/Title --> 
     
@@ -116,7 +116,7 @@
     <div id="filters" class="sixteen columns">
       <ul class="clearfix">
         <li><a id="all" href="#" data-filter="*" class="active">
-          <h5>All</h5></a></li>
+          <h5>Все</h5></a></li>
           
           @foreach($tags as $tag)
           	<li><a class="" href="#" data-filter=".{{$tag}}">
@@ -174,8 +174,8 @@
 @if(isset($peoples) && is_object($peoples))
 
 <section class="page_section team" id="team"><!--main-section team-start-->
-  <div class="container">
-    <h2>Team</h2>
+  <div class="container"  id="Team">
+    <h2>Команда</h2>
     <h6>Lorem ipsum dolor sit amet, consectetur adipiscing.</h6>
     
     <div class="team_section clearfix">
@@ -207,7 +207,7 @@
   <div class="container">
     <section class="page_section contact" id="contact">
       <div class="contact_section">
-        <h2>Contact Us</h2>
+        <h2>Контакты</h2>
         <div class="row">
           <div class="col-lg-4">
             
@@ -228,11 +228,11 @@
                                 <p>104, Some street, NewYork, USA</p>
                             </div>
                             <div class="detail">
-                                <h4>call us</h4>
+                                <h4>Телефон</h4>
                                 <p>+1 234 567890</p>
                             </div>
                             <div class="detail">
-                                <h4>Email us</h4>
+                                <h4>Email</h4>
                                 <p>support@sitename.com</p>
                             </div> 
                         </div>
@@ -250,10 +250,10 @@
           <div class="form">
           
           <form action="{{ route('home')}}" method="post">
-            <input class="input-text" type="text" name="name" value="Your Name *" onFocus="if(this.value==this.defaultValue)this.value='';" onBlur="if(this.value=='')this.value=this.defaultValue;">
-            <input class="input-text" type="text" name="email" value="Your E-mail *" onFocus="if(this.value==this.defaultValue)this.value='';" onBlur="if(this.value=='')this.value=this.defaultValue;">
-            <textarea name="text" class="input-text text-area" cols="0" rows="0" onFocus="if(this.value==this.defaultValue)this.value='';" onBlur="if(this.value=='')this.value=this.defaultValue;">Your Message *</textarea>
-            <input class="input-btn" type="submit" value="send message">
+            <input class="input-text" type="text" name="name" value="Ваше имя *" onFocus="if(this.value==this.defaultValue)this.value='';" onBlur="if(this.value=='')this.value=this.defaultValue;">
+            <input class="input-text" type="text" name="email" value="Ваш E-mail *" onFocus="if(this.value==this.defaultValue)this.value='';" onBlur="if(this.value=='')this.value=this.defaultValue;">
+            <textarea name="text" class="input-text text-area" cols="0" rows="0" onFocus="if(this.value==this.defaultValue)this.value='';" onBlur="if(this.value=='')this.value=this.defaultValue;">Ваше сообщение *</textarea>
+            <input class="input-btn" type="submit" value="Отправить">
             
             
             {{ csrf_field() }}
@@ -266,6 +266,6 @@
     </section>
   </div>
   <div class="container">
-    <div class="footer_bottom"><span>Copyright � 2014,    Template by <a href="http://webthemez.com">WebThemez.com</a>. </span> </div>
+    <div class="footer_bottom"><span>Copyright  2017,    Template by <a href="http://webthemez.com">WebThemez.com</a>. </span> </div>
   </div>
 </footer>
